@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">GoluggDemo</string>
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Abhijeet Manna</string>
+    <string name="nav_header_subtitle1">Wallet Balance:</string>
+    <string name="nav_header_subtitle2">$10.00</string>
+
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_mytrips">My trips</string>
+    <string name="menu_mywallet">My wallet</string>
+    <string name="menu_chats">Chats</string>
+    <string name="menu_notifications">Notifications</string>
+    <string name="menu_editprofile">Edit Profile</string>
+    <string name="menu_changepassword">Change Password</string>
+    <string name="menu_contactus">Contact us</string>
+    <string name="menu_aboutus">About us</string>
+    <string name="menu_termsandcondition">Terms and condition</string>
+    <string name="menu_pp_cp">Privacy policy / Cookies policy</string>
+    <string name="menu_logout">Log out</string>
+</resources>

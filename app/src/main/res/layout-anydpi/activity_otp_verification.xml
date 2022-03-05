@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtpVerificationActivity">
+    <ImageView
+        android:id="@+id/ivBackArrow"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/icon35" />
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/ivBackArrow"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/ivBackArrow"
+        android:text="Sign up"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvSignUp"
+        android:layout_marginTop="30dp"
+        android:background="#D3D3D3"
+        android:elevation="4dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="OTP Verification"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tvDigitCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter the 6 digit code sent to you at"
+        android:layout_below="@+id/tvOTP"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/tvMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+91 9876543210"
+        android:textSize="16sp"
+        android:layout_below="@+id/tvDigitCode"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <com.chaos.view.PinView
+                android:id="@+id/OtpPin"
+                style="@style/PinWidget.PinView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+
+                android:layout_marginBottom="8dp"
+                android:cursorVisible="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:itemBackground="#65EAEAEA"
+                app:hideLineWhenFilled="true"
+                app:itemCount="6"
+                app:itemHeight="50dp"
+                app:itemRadius="6dp"
+                app:itemSpacing="3dp"
+                app:itemWidth="50dp"
+                app:layout_constraintBottom_toBottomOf="@id/container"
+                app:layout_constraintEnd_toEndOf="@id/container"
+                app:layout_constraintHorizontal_bias="0.49"
+                app:layout_constraintStart_toStartOf="@id/container"
+                app:layout_constraintTop_toTopOf="@id/container"
+                app:lineColor="@android:color/black"
+                app:lineWidth="1dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/buttonbg"
+            android:fontFamily="@font/roboto"
+            android:text="Sign up"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center|center_vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Didn't received verification code yet"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView4"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivResend"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@+id/textView4"
+                        android:src="@drawable/icon48" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Resend Code"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/ivBackArrow"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/icon35" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/ivBackArrow"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/ivBackArrow"
+        android:text="Login"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvLogin"
+        android:layout_marginTop="30dp"
+        android:background="#D3D3D3"
+        android:elevation="4dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Welcome Back!"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivPhone"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="30dp"
+                    app:srcCompat="@drawable/icon32" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/ivPhone"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:baselineAligned="true"
+                    android:foregroundGravity="bottom"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxBackgroundMode="filled"
+                    app:boxStrokeColor="@android:color/holo_blue_dark"
+                    app:hintTextColor="@android:color/holo_blue_dark">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="Phone Number"
+                        android:inputType="phone"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivPassword"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/ivEmail"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="40dp"
+                    app:srcCompat="@drawable/icon31" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/firstname"
+                    android:layout_alignBaseline="@id/ivPassword"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@id/ivEmail"
+                    android:baselineAligned="true"
+                    android:foregroundGravity="bottom"
+
+                    app:boxBackgroundColor="@color/white"
+                    app:boxBackgroundMode="filled"
+                    app:boxStrokeColor="@android:color/holo_blue_dark"
+                    app:hintTextColor="@android:color/holo_blue_dark"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:gravity="center_vertical"
+                        android:hint="Password"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Forgot Password?"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/buttonbg"
+                android:fontFamily="@font/roboto"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textSize="20sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center|center_vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't have accoount on Golugg?"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/textView4"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@id/textView4"
+                        android:text="Signup"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
